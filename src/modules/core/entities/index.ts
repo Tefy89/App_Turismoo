@@ -10,10 +10,20 @@ import { PlaceSchedulesEntity } from './place-schedule.entity';
 import { ShiftEntity } from './shift.entity';
 import { SocialNetworkEntity } from './social-network.entity';
 
+import { EntranceFeeEntity } from './entrance-fee.entity';
+import { PlaceStyleEntity } from './place-style.entity';
+import { TourGuideEntity } from './tour-guide.entity';
+import { TourGuideLanguageEntity } from './tour-guide-languaje.entity';
+
 export const entities = [
   // ActivityEntity,
   PlaceEntity,
   PlaceSchedulesEntity,
   ShiftEntity,
   SocialNetworkEntity,
+  
+  EntranceFeeEntity,
+  PlaceStyleEntity,
+  TourGuideEntity,
+  TourGuideLanguageEntity
 ];

@@ -5,8 +5,14 @@ import {
   PlaceEntity,
   ShiftEntity,
   SocialNetworkEntity,
-  PlaceSchedulesEntity,
+  PlaceSchedulesEntity
 } from '@modules/core/entities';
+
+import { EntranceFeeEntity } from './entities/entrance-fee.entity';
+import { PlaceStyleEntity } from './entities/place-style.entity';
+import { TourGuideEntity } from './entities/tour-guide.entity';
+import { TourGuideLanguageEntity } from './entities/tour-guide-languaje.entity';
+
 
 export const coreProviders = [
   {
@@ -30,6 +36,32 @@ export const coreProviders = [
   {
     provide: CoreRepositoryEnum.PLACE_SCHEDULES_REPOSITORY,
     useFactory: (dataSource: DataSource) => dataSource.getRepository(PlaceSchedulesEntity),
+    inject: [ConfigEnum.PG_DATA_SOURCE],
+  },
+
+
+  //luis
+  {
+    provide: CoreRepositoryEnum.ENTRANCE_FEE_REPOSITORY,
+    useFactory: (dataSource: DataSource) => dataSource.getRepository(EntranceFeeEntity),
+    inject: [ConfigEnum.PG_DATA_SOURCE],
+  },
+  
+  {
+    provide: CoreRepositoryEnum.PLACE_STYLE_REPOSITORY,
+    useFactory: (dataSource: DataSource) => dataSource.getRepository(PlaceStyleEntity),
+    inject: [ConfigEnum.PG_DATA_SOURCE],
+  },
+
+  {
+    provide: CoreRepositoryEnum.TOUR_GUIDE_REPOSITORY,
+    useFactory: (dataSource: DataSource) => dataSource.getRepository(TourGuideEntity),
+    inject: [ConfigEnum.PG_DATA_SOURCE],
+  },
+
+  {
+    provide: CoreRepositoryEnum.TOUR_GUIDE_LANGUAGE_REPOSITORY,
+    useFactory: (dataSource: DataSource) => dataSource.getRepository(TourGuideLanguageEntity),
     inject: [ConfigEnum.PG_DATA_SOURCE],
   },
 ];
