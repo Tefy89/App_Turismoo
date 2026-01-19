@@ -6,12 +6,22 @@ import { controllers } from '@modules/core/roles/owner/controllers';
 import { coreProviders } from '@modules/core/core.provider';
 import { SharedCoreModule } from '@modules/core/shared-core/shared-core.module';
 import { ReportsModule } from '@modules/reports/reports.module';
+import { EntranceFeesService } from './services/entrance-fee.service';
+import { PlaceStylesService } from './services/place-style.service';
+import { TourGuideLanguagesService } from './services/tour-guide-languaje.service';
+import { TourGuidesService } from './services/tour-guide.service';
 
 @Global()
 @Module({
   imports: [CatalogueModule, FileModule, MailModule, SharedCoreModule, ReportsModule],
   controllers,
-  providers: [...coreProviders],
+  providers: [
+    ...coreProviders,
+    EntranceFeesService,
+    PlaceStylesService,
+    TourGuideLanguagesService,
+    TourGuidesService
+  ],
   exports: [],
 })
 export class OwnerModule {}

@@ -10,7 +10,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import { CatalogueEntity } from '@modules/common/catalogue/catalogue.entity';
-import { ClassificationEntity } from '@modules/core/entities/classification.entity';
+//import { ClassificationEntity } from '@modules/core/entities/classification.entity';
 import { UserEntity } from '@auth/entities';
 import { TourGuideLanguageEntity } from './tour-guide-languaje.entity';
 

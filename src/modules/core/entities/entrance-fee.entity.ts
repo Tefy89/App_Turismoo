@@ -10,7 +10,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import { CatalogueEntity } from '@modules/common/catalogue/catalogue.entity';
-import { ClassificationEntity } from '@modules/core/entities/classification.entity';
+//import { ClassificationEntity } from '@modules/core/entities/classification.entity';
 import { PlaceEntity } from './place.entity';
 
 @Entity('entrance_fees', { schema: 'core' })
