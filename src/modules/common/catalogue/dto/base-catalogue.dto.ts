@@ -26,6 +26,6 @@ export class BaseCatalogueDto {
   @IsEnum(CatalogueStateEnum, isEnumValidationOptions())
   readonly state: CatalogueStateEnum;
 
-  @IsEnum(isStringValidationOptions())
+  @IsEnum(CatalogueTypeEnum, isEnumValidationOptions())
   readonly type: CatalogueTypeEnum;
 }

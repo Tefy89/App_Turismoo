@@ -129,7 +129,7 @@ export class UserEntity {
     type: 'varchar',
     nullable: true,
   })
-  refreshToken: string|null;
+  refreshToken: string | null;
 
   @Column({
     name: 'activated_at',

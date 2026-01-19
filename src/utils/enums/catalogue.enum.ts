@@ -1,4 +1,7 @@
 export enum CatalogueTypeEnum {
+  platform = 'platform',
+  category_place = 'category_place',
+  religious_order = 'religious_order',
   users_identification_type = 'users_identification_type',
   users_blood_type = 'users_blood_type',
   users_ethnic_origin = 'users_ethnic_origin',

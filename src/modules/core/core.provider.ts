@@ -28,7 +28,7 @@ export const coreProviders = [
   },
 
   {
-    provide: CoreRepositoryEnum.PLACE_SCHEDULES_REPOSITORY,
+    provide: CoreRepositoryEnum.PLACE_SCHEDULE_REPOSITORY,
     useFactory: (dataSource: DataSource) => dataSource.getRepository(PlaceSchedulesEntity),
     inject: [ConfigEnum.PG_DATA_SOURCE],
   },
