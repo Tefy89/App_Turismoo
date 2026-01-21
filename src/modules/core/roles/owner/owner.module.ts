@@ -10,6 +10,10 @@ import { PlacesService } from './services/place.service';
 import { SocialNetworksService } from './services/social-networks.service';
 import { PlaceSchedulesService } from './services/place-schedules.service';
 import { ShiftsService } from './services/shifts.service';
+import { EntranceFeesService } from './services/entrance-fee.service';
+import { PlaceStylesService } from './services/place-style.service';
+import { TourGuideLanguagesService } from './services/tour-guide-languaje.service';
+import { TourGuidesService } from './services/tour-guide.service';
 
 @Global()
 @Module({
@@ -21,6 +25,10 @@ import { ShiftsService } from './services/shifts.service';
     SocialNetworksService,
     PlaceSchedulesService,
     ShiftsService,
+    EntranceFeesService,
+    PlaceStylesService,
+    TourGuideLanguagesService,
+    TourGuidesService,
   ],
   exports: [],
 })
