@@ -51,12 +51,11 @@ export class PlaceStyleEntity {
   enabled: boolean;
 
   /** Inverse Relationship **/
-  
 
   /** Foreign Keys **/
   @ManyToOne(() => PlaceEntity, { nullable: true })
   @JoinColumn({ name: 'place_id' })
-  geographicArea: PlaceEntity;
+  place: PlaceEntity;
   @Column({
     type: 'uuid',
     name: 'place_id',
@@ -66,5 +65,4 @@ export class PlaceStyleEntity {
   placeId: string;
 
   /** Columns **/
-  
 }

@@ -51,7 +51,6 @@ export class TourGuideLanguageEntity {
   enabled: boolean;
 
   /** Inverse Relationship **/
-  
 
   /** Foreign Keys **/
   @ManyToOne(() => TourGuideEntity, { nullable: true })
@@ -65,7 +64,5 @@ export class TourGuideLanguageEntity {
   })
   tourGuideId: string;
 
-
   /** Columns **/
-  
 }

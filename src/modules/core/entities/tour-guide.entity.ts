@@ -68,7 +68,7 @@ export class TourGuideEntity {
   userId: string;
 
   /** Columns **/
-   @Column({
+  @Column({
     name: 'available',
     type: 'boolean',
     comment: 'Disponibilidad del guia',

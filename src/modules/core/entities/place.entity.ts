@@ -12,6 +12,8 @@ import {
 import { CatalogueEntity } from '@modules/common/catalogue/catalogue.entity';
 import { PlaceSchedulesEntity } from './place-schedule.entity';
 import { SocialNetworkEntity } from './social-network.entity';
+import { PlaceStyleEntity } from './place-style.entity';
+import { EntranceFeeEntity } from './entrance-fee.entity';
 //import { PlaceStyleEntity } from './place-style.entity';
 //import { EntranceFeeEntity } from './entrance-fee.entity';
 //import { RoutePlaceEntity } from './routeplace.entity';
@@ -60,13 +62,13 @@ export class PlaceEntity {
   @OneToMany(() => PlaceSchedulesEntity, (schedule) => schedule.place)
   schedules: PlaceSchedulesEntity[];
 
-  /*@OneToMany(() => PlaceStyleEntity, (placeStyle) => placeStyle.place)
+  @OneToMany(() => PlaceStyleEntity, (placeStyle) => placeStyle.place)
   placeStyles: PlaceStyleEntity[];
 
   @OneToMany(() => EntranceFeeEntity, (entranceFee) => entranceFee.place)
   entranceFees: EntranceFeeEntity[];
 
-  @OneToMany(() => RoutePlaceEntity, (routePlace) => routePlace.place)
+  /*@OneToMany(() => RoutePlaceEntity, (routePlace) => routePlace.place)
   routePlaces: RoutePlaceEntity[];*/
 
   /** Foreign Keys — Catalogue **/

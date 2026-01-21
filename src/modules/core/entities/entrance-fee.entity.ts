@@ -51,7 +51,6 @@ export class EntranceFeeEntity {
   enabled: boolean;
 
   /** Inverse Relationship **/
-  
 
   /** Foreign Keys **/
   @ManyToOne(() => PlaceEntity, { nullable: true })
