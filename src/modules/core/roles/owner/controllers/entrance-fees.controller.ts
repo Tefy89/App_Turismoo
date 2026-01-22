@@ -77,12 +77,12 @@ export class EntranceFeesController {
     };
   }
 
-  @ApiOperation({ summary: 'Remove One' })
+  @ApiOperation({ summary: 'Delete One' })
   @Delete(':id')
-  async remove(
+  async delete(
     @Param('id', ParseUUIDPipe) id: string,
   ): Promise<ResponseHttpInterface> {
-    const serviceResponse = await this.service.remove(id);
+    const serviceResponse = await this.service.delete(id);
     return {
       data: serviceResponse,
       message: 'Tarifa eliminada',
@@ -95,8 +95,7 @@ export class EntranceFeesController {
   async catalogue(): Promise<ResponseHttpInterface> {
     const serviceResponse = await this.service.catalogue();
     return {
-      data: serviceResponse.data,
-      pagination: serviceResponse.pagination,
+      data: serviceResponse,
       message: 'Catalogue',
       title: 'Catalogue',
     };

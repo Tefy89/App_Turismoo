@@ -10,7 +10,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import { CatalogueEntity } from '@modules/common/catalogue/catalogue.entity';
-//import { ClassificationEntity } from '@modules/core/entities/classification.entity';
+
 import { TourGuideEntity } from './tour-guide.entity';
 
 @Entity('tour_guide_languages', { schema: 'core' })
@@ -54,13 +54,12 @@ export class TourGuideLanguageEntity {
   
 
   /** Foreign Keys **/
-  @ManyToOne(() => TourGuideEntity, { nullable: true })
+  @ManyToOne(() => TourGuideEntity, )
   @JoinColumn({ name: 'tour_guide_id' })
   tourGuide: TourGuideEntity;
   @Column({
     type: 'uuid',
     name: 'tour_guide_id',
-    nullable: true,
     comment: 'Guía Turístico',
   })
   tourGuideId: string;

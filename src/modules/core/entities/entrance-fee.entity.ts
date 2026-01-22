@@ -10,7 +10,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import { CatalogueEntity } from '@modules/common/catalogue/catalogue.entity';
-//import { ClassificationEntity } from '@modules/core/entities/classification.entity';
+
 import { PlaceEntity } from './place.entity';
 
 @Entity('entrance_fees', { schema: 'core' })
@@ -54,13 +54,12 @@ export class EntranceFeeEntity {
   
 
   /** Foreign Keys **/
-  @ManyToOne(() => PlaceEntity, { nullable: true })
+  @ManyToOne(() => PlaceEntity)
   @JoinColumn({ name: 'place_id' })
   place: PlaceEntity;
   @Column({
     type: 'uuid',
     name: 'place_id',
-    nullable: true,
     comment: 'Lugar Turistico',
   })
   placeId: string;

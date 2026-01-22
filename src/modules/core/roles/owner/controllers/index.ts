@@ -1,7 +1,7 @@
-import { EntranceFeesController } from "./entrance-fee.controller";
-import { PlaceStylesController } from "./place-style.controller";
-import { TourGuideLanguagesController } from "./tour-guide-languaje.controller";
-import { TourGuidesController } from "./tour-guide.controller";
+import { EntranceFeesController } from "./entrance-fees.controller";
+import { PlaceStylesController } from "./place-styles.controller";
+import { TourGuideLanguagesController } from "./tour-guide-languajes.controller";
+import { TourGuidesController } from "./tour-guides.controller";
 
 
 export const controllers = [

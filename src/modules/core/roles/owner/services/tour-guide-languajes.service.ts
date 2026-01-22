@@ -33,7 +33,7 @@ export class TourGuideLanguagesService {
     });
   }
 
-  async remove(id: string): Promise<TourGuideLanguageEntity> {
+  async delete(id: string): Promise<TourGuideLanguageEntity> {
     const entity = await this.repository.findOne({ where: { id } });
 
     if (!entity) {

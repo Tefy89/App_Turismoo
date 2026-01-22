@@ -66,7 +66,7 @@ export class EntranceFeesService {
     return await this.repository.save(entity);
   }
 
-  async remove(id: string): Promise<EntranceFeeEntity> {
+  async delete(id: string): Promise<EntranceFeeEntity> {
     const entity = await this.repository.findOne({ where: { id } });
 
     if (!entity) {
@@ -78,6 +78,25 @@ export class EntranceFeesService {
     return await this.repository.softRemove(entity);
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   async catalogue(): Promise<ServiceResponseHttpInterface> {
     const response = await this.repository.findAndCount({
       take: 1000,

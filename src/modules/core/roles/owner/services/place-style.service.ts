@@ -35,7 +35,7 @@ export class PlaceStylesService {
     });
   }
 
-  async remove(id: string): Promise<PlaceStyleEntity> {
+  async delete(id: string): Promise<PlaceStyleEntity> {
     const entity = await this.repository.findOne({ where: { id } });
 
     if (!entity) {

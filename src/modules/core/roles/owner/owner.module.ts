@@ -8,7 +8,7 @@ import { SharedCoreModule } from '@modules/core/shared-core/shared-core.module';
 import { ReportsModule } from '@modules/reports/reports.module';
 import { EntranceFeesService } from './services/entrance-fee.service';
 import { PlaceStylesService } from './services/place-style.service';
-import { TourGuideLanguagesService } from './services/tour-guide-languaje.service';
+import { TourGuideLanguagesService } from './services/tour-guide-languajes.service';
 import { TourGuidesService } from './services/tour-guide.service';
 
 @Global()

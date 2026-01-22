@@ -1,24 +1,25 @@
 import { Controller, Get, Post, Delete, Body, Param, Query, ParseUUIDPipe } from '@nestjs/common';
 import { ApiTags, ApiOperation } from '@nestjs/swagger';
-import { PlaceStylesService } from '../services/place-style.service';
-import { CreatePlaceStyleDto } from '../dto/place-style';
+import { TourGuideLanguagesService } from '../services/tour-guide-languajes.service';
+import { CreateTourGuideLanguageDto } from '../dto/tour-guide-languaje/create-tour-guide-languaje.dto';
 import { ResponseHttpInterface } from '@utils/interfaces';
 import { PaginationDto } from '@utils/pagination';
 
-@ApiTags('Place Styles')
-@Controller('core/owner/place-styles')
-export class PlaceStylesController {
-  constructor(private readonly service: PlaceStylesService) {}
+
+@ApiTags('Tour Guide Languages')
+@Controller('core/owner/tour-guide-languages')
+export class TourGuideLanguagesController {
+  constructor(private readonly service: TourGuideLanguagesService) {}
 
   @ApiOperation({ summary: 'Create' })
   @Post()
   async create(
-    @Body() payload: CreatePlaceStyleDto,
+    @Body() payload: CreateTourGuideLanguageDto,
   ): Promise<ResponseHttpInterface> {
     const serviceResponse = await this.service.create(payload);
     return {
       data: serviceResponse,
-      message: 'Estilo agregado al lugar',
+      message: 'Idioma asignado al guía',
       title: 'Creado',
     };
   }
@@ -32,20 +33,20 @@ export class PlaceStylesController {
     return {
       data: serviceResponse.data,
       pagination: serviceResponse.pagination,
-      message: 'Estilos listados',
+      message: 'Idiomas del guía listados',
       title: 'Success',
     };
   }
 
-  @ApiOperation({ summary: 'Remove One' })
+  @ApiOperation({ summary: 'Delete One' })
   @Delete(':id')
-  async remove(
+  async delete(
     @Param('id', ParseUUIDPipe) id: string,
   ): Promise<ResponseHttpInterface> {
-    const serviceResponse = await this.service.remove(id);
+    const serviceResponse = await this.service.delete(id);
     return {
       data: serviceResponse,
-      message: 'Estilo eliminado del lugar',
+      message: 'Idioma eliminado del guía',
       title: 'Eliminado',
     };
   }

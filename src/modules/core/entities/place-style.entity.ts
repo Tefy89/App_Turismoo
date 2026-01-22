@@ -54,13 +54,12 @@ export class PlaceStyleEntity {
   
 
   /** Foreign Keys **/
-  @ManyToOne(() => PlaceEntity, { nullable: true })
+  @ManyToOne(() => PlaceEntity)
   @JoinColumn({ name: 'place_id' })
-  geographicArea: PlaceEntity;
+  place: PlaceEntity;
   @Column({
     type: 'uuid',
     name: 'place_id',
-    nullable: true,
     comment: 'Lugar Turístico',
   })
   placeId: string;

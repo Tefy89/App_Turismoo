@@ -65,7 +65,7 @@ export class TourGuidesService {
     return await this.repository.save(entity);
   }
 
-  async remove(id: string): Promise<TourGuideEntity> {
+  async delete(id: string): Promise<TourGuideEntity> {
     const entity = await this.repository.findOne({ where: { id } });
 
     if (!entity) {

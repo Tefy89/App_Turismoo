@@ -75,12 +75,12 @@ export class TourGuidesController {
     };
   }
 
-  @ApiOperation({ summary: 'Remove One' })
+  @ApiOperation({ summary: 'Delete One' })
   @Delete(':id')
-  async remove(
+  async delete(
     @Param('id', ParseUUIDPipe) id: string,
   ): Promise<ResponseHttpInterface> {
-    const serviceResponse = await this.service.remove(id);
+    const serviceResponse = await this.service.delete(id);
     return {
       data: serviceResponse,
       message: 'Guía eliminado',

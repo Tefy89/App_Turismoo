@@ -10,7 +10,6 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import { CatalogueEntity } from '@modules/common/catalogue/catalogue.entity';
-//import { ClassificationEntity } from '@modules/core/entities/classification.entity';
 import { UserEntity } from '@auth/entities';
 import { TourGuideLanguageEntity } from './tour-guide-languaje.entity';
 
@@ -55,14 +54,15 @@ export class TourGuideEntity {
   @OneToMany(() => TourGuideLanguageEntity, (entity) => entity.tourGuide)
   languages: TourGuideLanguageEntity[];
 
+  
+
   /** Foreign Keys **/
-  @ManyToOne(() => UserEntity, { nullable: true })
+  @ManyToOne(() => UserEntity)
   @JoinColumn({ name: 'user_id' })
   user: UserEntity;
   @Column({
     type: 'uuid',
     name: 'user_id',
-    nullable: true,
     comment: 'Usuario asociado al guia turistico',
   })
   userId: string;
